@@ -9,6 +9,9 @@ body {
     background-color: #fff;
 
 }
+main {
+    height: 100vh;
+}
 
 header {
     width: 100vw;
@@ -172,7 +175,7 @@ footer span {
     border: 1px solid rgb(240, 223, 223);
     position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     
     * {
         margin-left: 0;
@@ -430,7 +433,7 @@ footer span {
     }
     
 }
-@media screen and (min-width: 1441px) {
+@media (min-width: 1441px) {
     body {
         margin-left: 50px;
         margin-right: 50px;
