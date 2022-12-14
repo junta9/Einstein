@@ -1,3 +1,4 @@
+
 * {
     margin-left: 0;
     margin-right: 0;
@@ -25,14 +26,12 @@ header {
     text-decoration: none;
     color: rgb(82, 82, 82);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 #logo {
     height: 60px;
 }
-#logo {
-    height: 50px;
-}
+
 /* Animation : surligner au survol de la souris */
 .navbar a {
     display: inline;
@@ -242,4 +241,80 @@ footer span {
     position: relative;
 }
 
+@media screen and (max-width: 425px) {
+    * {
+        overflow-x: hidden;
+    }
+    .navbar ul a {
+        font-size: 0.8em;
+    }
+    #logo {
+        height: 30px;
+    }
+    main {
+        height: 100%;
+        align-items: flex-start;
+    }
+    form {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+    fieldset {
+        display: flex;
+        height: 90%;
+        width: auto;
+        border: none;
+        background: rgb(13,28,69);
+        border-radius: 0;
+    }
+    legend {
+        border-radius: 0;
+    }
+    h1 {
+      font-size: 0.5em;
+    }
+    footer {
+      font-size: 0.5em;
+      height: 50px;
+    }
+    .footer span {
+      height: 30px;
+      width: 30px;
+    }
+  
+}
 
+@media screen and (max-width: 1024px) {
+    form {
+        height: 450px;
+    }
+    fieldset {
+        justify-content: space-around;
+    }
+    .info, .inputs {
+        width: 130px;
+        margin: 0;
+        padding: 0;
+
+    }
+    fieldset h1 {
+        font-size: 1.5em;
+    }
+    input {
+        font-size: 1em;
+    }
+    textarea {
+        font-size: 1em;
+    }
+    textarea::placeholder {
+        line-height: 150px;
+    }
+    .contact {
+        position: relative;
+        top: 200px;
+    }
+
+}

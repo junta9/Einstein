@@ -24,7 +24,7 @@ header {
   text-decoration: none;
   color: rgb(82, 82, 82);
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 #logo {
   height: 60px;
@@ -54,22 +54,22 @@ header {
 }
 /* ********************************************* */
 main {
-  height: 100vh;
   width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
+  text-align: center;
 }
 .cover {
   background-image: url(./images/einstein/depuis-quand-mesure-t_on-le-temps.jpg);
   background-repeat: no-repeat;
+  background-position:center;
   background-size: cover;
   position: relative;
   height: 500px;
-  width: 100%;
+  width: 100vw;
   filter: hue-rotate(210deg);
   z-index: -1;
 }
@@ -78,7 +78,7 @@ h1 {
   color: rgb(245, 172, 227);
   position: absolute;
   top: 12%;
-  left: 42.5%;
+  z-index: 1;
 }
 .titre {
   display: flex;
@@ -86,29 +86,35 @@ h1 {
 }
 h2 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   color: rgb(164, 154, 225);
-  width: 70%;
+  padding: 50px;
 }
 
 
 .photo-figure {
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 50%;
+    width: 100%;
     height: 50vh;
-    flex-direction: row;
+    /* flex-direction: row; */
    
 }
 .photo-figure div {
-    width: 250px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     margin: 5px;
     overflow: hidden;
     object-fit: cover;
+}
+
+.photo-figure div img {
+  width: 100%;
 }
 h3 {
   border: 1px solid rgb(164, 154, 225);
@@ -134,11 +140,12 @@ h3 {
     opacity: 0.8;
     padding: 10px;
     padding-left: 15px;
+    text-align: start;
     padding-right: 15px;
 }
 .scroll-text:hover {
     overflow: auto;
-    transform: scale(1.5);
+    transform: scale(1);
     height: 300px;
     width: 500px;
     background-color: rgb(164, 154, 225);
@@ -146,6 +153,7 @@ h3 {
     transition: 0.5s ease-in-out;
     font-size: 26px;
     opacity: 1;
+    z-index: 2;
 }
 
 footer {
@@ -193,4 +201,66 @@ footer span {
   border-radius: 50%;
   border: 1px solid rgb(240, 223, 223);
   position: relative;
+}
+@media screen and (max-width: 1230px) {
+  .photo-figure div {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .cover {
+    height: 200px;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .photo-figure div {
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 425px) {
+  * {
+      overflow-x: hidden;
+  }
+  .navbar ul a {
+      font-size: 0.8em;
+  }
+  #logo {
+      height: 30px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    padding: 5px;
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 0.8em;
+  }
+  .photo-figure div {
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  footer {
+    font-size: 0.5em;
+    height: 50px;
+}
+.footer span {
+    height: 30px;
+    width: 30px;
+}
+  
 }
